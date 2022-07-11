@@ -42,6 +42,7 @@
         function checkcondition(div1,div2,div3) {
             if (getdata(div1)!=""&& getdata(div2)!= "" && getdata(div3)!= "" && getdata(div1)==getdata(div2)&& getdata(div2)==getdata(div3))
             {
+                
                 if(getdata(div3)=='X'){
                     alert("X WINS");
                     return true;
@@ -127,6 +128,45 @@
         #div9 {
             border-bottom: none;
         }
+        .button {
+  display: inline-block;
+  border-radius: 40px;
+  background-color: lime;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 178px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
     </style>
 
 
@@ -146,6 +186,9 @@
         <div id="div7" onclick="fill(this)"></div>
         <div id="div8" onclick="fill(this)"></div>
         <div id="div9" onclick="fill(this)"></div>
+    </div>
+    <div class="yy">
+        <button class="button" style="vertical-align:middle" onclick="location.reload()"><span>Reset</span>
     </div>
 </body>
 
