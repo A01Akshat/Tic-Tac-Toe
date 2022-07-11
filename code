@@ -23,7 +23,7 @@
                 count++;
                 if(checkwin())
             {
-                alert("WINNER");
+                
                 reset();
             }
             } else {
@@ -42,7 +42,16 @@
         function checkcondition(div1,div2,div3) {
             if (getdata(div1)!=""&& getdata(div2)!= "" && getdata(div3)!= "" && getdata(div1)==getdata(div2)&& getdata(div2)==getdata(div3))
             {
-                return true;
+                if(getdata(div3)=='X'){
+                    alert("X WINS");
+                    return true;
+                }
+                else
+                {
+                    alert("O WINS");
+                    return true;
+                }
+                
             }
         }
 
